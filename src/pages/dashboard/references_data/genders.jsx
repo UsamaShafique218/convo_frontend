@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
 import { Toast } from "primereact/toast";
 
+
 export default function Genders() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);

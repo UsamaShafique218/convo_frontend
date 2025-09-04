@@ -17,8 +17,8 @@ import { ThemeProvider } from "@material-tailwind/react";
 import { MaterialTailwindControllerProvider } from "@/context";
 import "../public/css/tailwind.css";
 
-import 'primereact/resources/themes/saga-blue/theme.css'; // Theme (choose one)
-import 'primereact/resources/primereact.min.css';         // Core styles
+import 'primereact/resources/themes/saga-blue/theme.css';  
+import 'primereact/resources/primereact.min.css';          
 import 'primeicons/primeicons.css';       
 
 ReactDOM.createRoot(document.getElementById("root")).render(

@@ -102,17 +102,22 @@ function CollaborationProfile() {
     <div className="p-6 space-y-6">
       <h1 className="text-2xl font-bold mb-4">Collaboration Profiles</h1>
 
-      {/* Create Button */}
-      <button
-        onClick={() => {
-          setFormData({ userId: "", name: "", email: "", skills: "" });
-          setIsEditing(false);
-          setShowPopup(true);
-        }}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-      >
-        Create Profile
-      </button>
+      <div className="user_header flex items-center justify-end pb-3">
+        <div className="search_main">
+          <input type="text" placeholder="Search..." className="search_input" value=""></input>
+        </div>
+        {/* Create Button */}
+        <button
+          onClick={() => {
+            setFormData({ userId: "", name: "", email: "", skills: "" });
+            setIsEditing(false);
+            setShowPopup(true);
+          }}
+          className="all_btn pt_12 pb_12"
+        >
+          Create Profile
+        </button>
+      </div> 
 
       {/* Popup Form */}
       {showPopup && (
@@ -180,29 +185,36 @@ function CollaborationProfile() {
 
       {/* Profiles Table */}
       <div className="overflow-x-auto">
-        <table className="w-full border border-gray-300">
+        <table className="w-full min-w-[723px] table_main">
           <thead>
             <tr className="bg-gray-200">
-              <th className="p-2 border">User ID</th>
-              <th className="p-2 border">Name</th>
-              <th className="p-2 border">Email</th>
-              <th className="p-2 border">Skills</th>
-              <th className="p-2 border">Actions</th>
+              <th className="cursor-pointer border-b border-blue-gray-50 py-3 px-5 text-left text-[11px] font-bold uppercase text-blue-gray-400">User ID</th>
+              <th className="cursor-pointer border-b border-blue-gray-50 py-3 px-5 text-left text-[11px] font-bold uppercase text-blue-gray-400">Name</th>
+              <th className="cursor-pointer border-b border-blue-gray-50 py-3 px-5 text-left text-[11px] font-bold uppercase text-blue-gray-400">Email</th>
+              <th className="cursor-pointer border-b border-blue-gray-50 py-3 px-5 text-left text-[11px] font-bold uppercase text-blue-gray-400">Skills</th>
+              <th className="cursor-pointer border-b border-blue-gray-50 py-3 px-5 text-left text-[11px] font-bold uppercase text-blue-gray-400">Actions</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-            <td className="border p-2 text-center">0</td>
-            <td className="border p-2">Dummy User</td>
-            <td className="border p-2">dummy@example.com</td>
-            <td className="border p-2">HTML, CSS</td>
-            <td className="border p-2 text-center">
-              <button className="bg-yellow-500 text-white px-3 py-1 rounded mr-2">
-                Edit
-              </button>
-              <button className="bg-red-500 text-white px-3 py-1 rounded">
-                Delete
-              </button>
+            <td className="py-[10px] px-5 border-b border-blue-gray-50">0</td>
+            <td className="py-[10px] px-5 border-b border-blue-gray-50">Dummy User</td>
+            <td className="py-[10px] px-5 border-b border-blue-gray-50">dummy@example.com</td>
+            <td className="py-[10px] px-5 border-b border-blue-gray-50">HTML, CSS</td>
+            <td className="py-[10px] px-5 border-b border-blue-gray-50 text-center">
+              <div className="flex items-center justify-center gap-2">
+                <i className="edit_dlt_icon" onClick={() => editProfile(profile)}>
+                  <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                  </svg>
+                </i>
+                <i onClick={() => deleteProfile(profile._id)} className="edit_dlt_icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="24" height="24" fill="red">
+                    <path d="M 14.984375 2.4863281 A 1 1 0 0 0 14 3.5 L 14 4 L 8.5 4 A 1 1 0 0 0 7.5 5 L 6 5 A 1 1 0 1 0 6 7 L 24 7 A 1 1 0 1 0 24 5 L 22.5 5 A 1 1 0 0 0 21.5 4 L 16 4 L 16 3.5 A 1 1 0 0 0 14.984375 2.4863281 z M 6 9 L 7.8 24.2 C 7.9 25.2 8.8 26 9.8 26 H 20.2 C 21.2 26 22.1 25.2 22.2 24.2 L 24 9 Z" />
+                  </svg>
+                </i>  
+              </div>
             </td>
           </tr>
             {profiles.length > 0 ? (
@@ -212,20 +224,22 @@ function CollaborationProfile() {
                   <td className="p-2 border">{profile.name}</td>
                   <td className="p-2 border">{profile.email}</td>
                   <td className="p-2 border">{profile.skills}</td>
-                  <td className="p-2 border flex gap-2 justify-center">
-                    <button
-                      onClick={() => editProfile(profile)}
-                      className="bg-green-500 text-white px-3 py-1 rounded"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => deleteProfile(profile._id)}
-                      className="bg-red-500 text-white px-3 py-1 rounded"
-                    >
-                      Delete
-                    </button>
-                  </td>
+                  <td className="p-2 border flex gap-2 justify-center"> 
+                    <div className="flex items-center justify-center gap-2">
+                      <i className="edit_dlt_icon" onClick={() => editProfile(profile)}>
+                        <svg fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                        </svg>
+                      </i>
+                      <i onClick={() => deleteProfile(profile._id)} className="edit_dlt_icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="24" height="24" fill="red">
+                          <path d="M 14.984375 2.4863281 A 1 1 0 0 0 14 3.5 L 14 4 L 8.5 4 A 1 1 0 0 0 7.5 5 L 6 5 A 1 1 0 1 0 6 7 L 24 7 A 1 1 0 1 0 24 5 L 22.5 5 A 1 1 0 0 0 21.5 4 L 16 4 L 16 3.5 A 1 1 0 0 0 14.984375 2.4863281 z M 6 9 L 7.8 24.2 C 7.9 25.2 8.8 26 9.8 26 H 20.2 C 21.2 26 22.1 25.2 22.2 24.2 L 24 9 Z" />
+                        </svg>
+                      </i> 
+
+                    </div>
+                  </td>  
                 </tr>
               ))
             ) : (
@@ -237,8 +251,7 @@ function CollaborationProfile() {
             )}
           </tbody>
         </table>
-      </div>
-
+      </div> 
       {/* Message */}
       {message && <p className="text-blue-600">{message}</p>}
     </div>

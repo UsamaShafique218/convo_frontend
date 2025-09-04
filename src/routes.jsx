@@ -4,24 +4,23 @@ import {
 } from "@heroicons/react/24/solid";
 import { Home } from "@/pages/dashboard"; 
 import Genders from "./pages/dashboard/references_data/Genders";
-import Industries from "./pages/dashboard/references_data/industries";
-import NetworkinGoals from "./pages/dashboard/references_data/networkinGoals";
-import ArtisticIdentities from "./pages/dashboard/references_data/artisticIdentities";
-import PrimaryMediums from "./pages/dashboard/references_data/primaryMediums";
-import SkillsAndTechniques from "./pages/dashboard/references_data/skillsAndTechniques";
-import ToolsAndSoftware from "./pages/dashboard/references_data/toolsAndSoftware";
-import CollaborationGoals from "./pages/dashboard/references_data/collaborationGoals";
-import Interests from "./pages/dashboard/references_data/interests";
-import Orientations from "./pages/dashboard/references_data/orientations";
-import Work from "./pages/dashboard/references_data/work";
-import CommunicationStyles from "./pages/dashboard/references_data/communicationStyles";
-import LoveLanguages from "./pages/dashboard/references_data/loveLanguages";
-import ZodiacSigns from "./pages/dashboard/references_data/zodiacSigns";
-import IcebreakerPrompts from "./pages/dashboard/references_data/icebreakerPrompts";
-import CollaborationProfile from "./pages/dashboard/collaborationProfile";
-import GetApiUsers from "./pages/dashboard/users"; 
-import Users from "./pages/dashboard/users";
-import Posts from "./pages/dashboard/posts";
+import Industries from "./pages/dashboard/references_data/Industries";
+import NetworkinGoals from "./pages/dashboard/references_data/NetworkinGoals";
+import ArtisticIdentities from "./pages/dashboard/references_data/ArtisticIdentities";
+import PrimaryMediums from "./pages/dashboard/references_data/PrimaryMediums";
+import SkillsAndTechniques from "./pages/dashboard/references_data/SkillsAndTechniques";
+import ToolsAndSoftware from "./pages/dashboard/references_data/ToolsAndSoftware";
+import CollaborationGoals from "./pages/dashboard/references_data/CollaborationGoals";
+import Interests from "./pages/dashboard/references_data/Interests";
+import Orientations from "./pages/dashboard/references_data/Orientations";
+import Work from "./pages/dashboard/references_data/Work";
+import CommunicationStyles from "./pages/dashboard/references_data/CommunicationStyles";
+import LoveLanguages from "./pages/dashboard/references_data/LoveLanguages";
+import ZodiacSigns from "./pages/dashboard/references_data/ZodiacSigns";
+import IcebreakerPrompts from "./pages/dashboard/references_data/IcebreakerPrompts";
+import CollaborationProfile from "./pages/dashboard/CollaborationProfile"; 
+import Users from "./pages/dashboard/Users";
+import Posts from "./pages/dashboard/Posts";
 // import Abc from "./pages/dashboard/references_data/abc";
 
 const icon = {
@@ -37,13 +36,7 @@ export const routes = [
         name: "dashboard",
         path: "/home",
         element: <Home />,
-      },
-      // {
-      //   icon: <UserCircleIcon {...icon} />,
-      //   name: "profile",
-      //   path: "/profile",
-      //   element: <Profile />,
-      // },
+      }, 
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Users",

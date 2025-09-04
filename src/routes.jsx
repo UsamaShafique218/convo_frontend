@@ -20,8 +20,7 @@ import ZodiacSigns from "./pages/dashboard/references_data/ZodiacSigns";
 import IcebreakerPrompts from "./pages/dashboard/references_data/IcebreakerPrompts";
 import CollaborationProfile from "./pages/dashboard/CollaborationProfile"; 
 import Users from "./pages/dashboard/Users";
-import Posts from "./pages/dashboard/Posts";
-// import Abc from "./pages/dashboard/references_data/abc";
+import Posts from "./pages/dashboard/Posts"; 
 
 const icon = {
   className: "w-5 h-5 text-inherit",
@@ -53,12 +52,7 @@ export const routes = [
             name: "Genders",
             path: "/Genders",
             element: <Genders />,
-          },
-          // {
-          //   name: "Abc",
-          //   path: "/abc",
-          //   element: <Abc />,
-          // },
+          }, 
           {
             name: "Industries",
             path: "/industries",

@@ -4,7 +4,7 @@ import "./cutome.css";
 import "./custom_responsive.css";
 
 import { SignIn, SignUp } from "./pages/auth";   
-import ProtectedRoute from "./pages/components/ProtectedRoute";
+import ProtectedRoute from "./pages/components/ProtectedRoute"; 
 import Profile from "./pages/dashboard/Profile";
 
 function App() {
@@ -28,6 +28,8 @@ function App() {
           </ProtectedRoute>
         } 
       />
+
+
 
       {/* Auth Layout: public */}
       <Route path="/auth/*" element={<Auth />} /> 

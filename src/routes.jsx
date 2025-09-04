@@ -3,7 +3,7 @@ import {
   TableCellsIcon, 
 } from "@heroicons/react/24/solid";
 import { Home } from "@/pages/dashboard"; 
-import Genders from "./pages/dashboard/references_data/genders";
+import Genders from "./pages/dashboard/references_data/Genders";
 import Industries from "./pages/dashboard/references_data/industries";
 import NetworkinGoals from "./pages/dashboard/references_data/networkinGoals";
 import ArtisticIdentities from "./pages/dashboard/references_data/artisticIdentities";
@@ -58,7 +58,7 @@ export const routes = [
         pages: [
           {
             name: "Genders",
-            path: "/genders",
+            path: "/Genders",
             element: <Genders />,
           },
           // {

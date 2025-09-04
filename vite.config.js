@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/api": {
-        target: "http://65.0.7.152:5000", // backend API base URL
+        target: "https://convo.arinovation.com", // backend API base URL
         changeOrigin: true,
         secure: false,
       },

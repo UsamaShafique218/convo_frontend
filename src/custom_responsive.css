@@ -1,0 +1,137 @@
+@media only screen and (min-width: 1901px) {
+     
+}
+
+@media only screen and (min-width: 1401px) and (max-width: 1900px){ 
+    
+}
+
+/*start of = (min-width: 1366px) and (max-width: 1440px)*/
+@media only screen and (min-width: 1366px) and (max-width: 1400px){
+  
+
+
+/*end of = (min-width: 1366px) and (max-width: 1900px)*/			
+}
+
+
+
+
+
+ 
+/*start of = (min-width: 1280px) and (max-width: 1365px)*/	
+@media only screen and (min-width: 1280px) and (max-width: 1365px){
+
+ 
+    
+/*end of = (min-width: 1280px) and (max-width: 1365px)*/			
+}
+
+
+
+
+
+/*start of = (min-width: 1024px) and (max-width: 1279px)*/
+@media only screen and (min-width: 1024px) and (max-width: 1279px){
+
+   
+	
+body { -webkit-text-size-adjust:none;  -webkit-overflow-scrolling: touch; }
+ 
+ 
+ 
+/*end of = (min-width: 1024px) and (max-width: 1279px)*/			
+}
+
+
+/*start of = (min-width: 768px) and (max-width: 1023px)*/	
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+  
+.dashboard_content{ margin-left: 0px; }
+
+
+
+.toggle_navbar .side_navbar{ width: 260px !important;  max-width: 260px !important; }
+
+.toggle_navbar .side_nav_link .w-full{ width: 100% !important; }
+
+.side_navbar{ width: 50px !important; overflow: hidden; max-width: 50px !important; }
+
+.dashboard_content { margin-left: 50px !important; }
+
+.side_nav_link .w-full{ width: auto !important; }
+
+
+
+
+/* end 768 */
+}
+
+
+@media only screen and (min-width:0px) and (max-width:767px){
+   
+  
+    
+.dashboard_content{ margin-left: 0px; }
+
+ .table_wrapper {
+    overflow-x: auto;
+  }
+   
+  .pagination_main{ padding-bottom: 20px; }
+  .toggle_navbar .dashboard_content{ margin-left: 0px !important; }
+
+  .side_navbar{ display: none; }
+
+.toggle_navbar .side_navbar{ width: 260px !important;  max-width: 260px !important; display: block; }
+.toggle_navbar .side_nav_link .w-full{ width: 100% !important; }
+
+
+
+    .navbar_icon {
+        position: absolute !important;
+        left: 24px;
+    }
+
+    .brand_name_main{ flex: 1; }
+ 
+   
+}
+
+
+@media only screen and (min-width:320px) and (max-width:520px){
+   
+ .pagination_main{ flex-direction: column; gap: 16px; }
+ .show_page{ display: none !important; }
+
+ .brand_name{ padding-left: 44px; }
+   
+}
+ 
+ 
+
+
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 812px) 
+and (-webkit-device-pixel-ratio : 3)
+and (orientation : landscape)  {  
+
+ 
+
+
+}
+
+@supports (-webkit-touch-callout: none) {
+    html, body {
+        overflow-x: hidden;  
+    }
+}
+
+
+
+
+
+
+
+

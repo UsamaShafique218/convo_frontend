@@ -1,6 +1,6 @@
 export * from "@/pages/dashboard/home";
 export * from "@/pages/dashboard/profile"; 
-export * from "@/pages/dashboard/references_data/Genders"; 
+export * from "@/pages/dashboard/references_data/Genders.jsx";
 // export * from "@/pages/dashboard/references_data/Abc"; 
 export * from "@/pages/dashboard/references_data/Industries"; 
 export * from "@/pages/dashboard/references_data/NetworkinGoals"; 

@@ -3,6 +3,7 @@ import {
   UserPlusIcon,
   UsersIcon,
   ChartBarIcon,
+  DocumentTextIcon
 } from "@heroicons/react/24/solid";
 
 export const statisticsCardsData = [
@@ -12,12 +13,14 @@ export const statisticsCardsData = [
     icon: UsersIcon,
     title: "Users",
     value: "0",
-    footer: {
-      color: "text-green-500",
-      value: "0",
-      label: "than last month",
-    },
+     
   }, 
+   {
+    color: "gray",
+    icon: DocumentTextIcon,
+    title: "Posts",
+    value: "0", 
+  },
 ];
 
 export default statisticsCardsData;

@@ -126,20 +126,23 @@ export default function Posts() {
  
 
   const handleView = (id) => {
-  setLoadingView(true);
-  setShowViewModal(true);
-  fetch(`/api/posts/${id}`)
-    .then((res) => res.json())
-    .then((res) => {
-      if (res?.status === 200) {
-        setViewPost(res.data.post || res.data);
-      } else {
-        setViewPost(null);
-      }
-    })
-    .catch(() => setViewPost(null))
-    .finally(() => setLoadingView(false));
-};
+    setLoadingView(true);
+    setShowViewModal(true);
+    fetch(`/api/posts/${id}`)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res?.status === 200) {
+          setViewPost(res.data.post || res.data);
+        } else {
+          setViewPost(null);
+        }
+      })
+      .catch(() => setViewPost(null))
+      .finally(() => setLoadingView(false));
+  };
+
+
+  
 
   return (
     <div className="flex flex-col p-6">
@@ -228,44 +231,71 @@ export default function Posts() {
  
 
       {/* View Modal */}
-      {showViewModal && (
-        <div className="popup_main">
-          <div className="popup_main_inner max-w-[800px]">
-            <div className="popup_header">
-              <h3>Post Detail</h3>
-              <div className="popup_icon">
-                <button onClick={() => { setShowViewModal(false); setViewPost(null); }}>✕</button>
-              </div>
-            </div>
-            <div className="popup_body p-4">
-              {loadingView ? (
-                <div className="text-center py-6">Loading...</div>
-              ) : !viewPost ? (
-                <div className="text-center py-6">No details found.</div>
-              ) : (
-                <div className="grid grid-cols-2 gap-x-6 gap-y-2">
-                  {Object.entries(viewPost).map(([key, value]) => (
-                    <p key={key}>
-                      <strong>{key}:</strong>{" "}
-                      {typeof value === "object" ? JSON.stringify(value, null, 2) : value?.toString()}
-                    </p>
-                  ))}
+{showViewModal && (
+  <div className="popup_main">
+    <div className="popup_main_inner max-w-[800px]">
+      <div className="popup_header">
+        <h3>Post Detail</h3>
+        <div className="popup_icon">
+          <button onClick={() => { setShowViewModal(false); setViewPost(null); }}>✕</button>
+        </div>
+      </div>
+      <div className="popup_body p-4">
+        {loadingView ? (
+          <div className="text-center py-6">Loading...</div>
+        ) : !viewPost ? (
+          <div className="text-center py-6">No details found.</div>
+        ) : (
+          <div className="grid grid-cols-2 gap-x-6 gap-y-2">
+            {/* 👇 yaha pe updated Object.entries wala code paste karo */}
+            {Object.entries(viewPost).map(([key, value]) => {
+              let displayValue = "-";
 
-                  <div className="flex gap-2 mt-6 justify-end">
-                    <button
-                      type="button"
-                      onClick={() => { setShowViewModal(false); setViewPost(null); }}
-                      className="all_btn gray_color"
-                    >
-                      Close
-                    </button>
-                  </div>
-                </div>
-              )}
+              if (key === "author") {
+                displayValue = value?.name || "-";
+              } 
+              else if (Array.isArray(value)) {
+                displayValue = value.length ? value.join(", ") : "-";
+              } 
+              else if (typeof value === "object" && value !== null) {
+                if (value.name) {
+                  displayValue = value.name; 
+                } else {
+                  displayValue = Object.entries(value)
+                    .map(([k, v]) => `${k}: ${v}`)
+                    .join(", ");
+                }
+              } 
+              else if (key.toLowerCase().includes("date")) {
+                displayValue = value ? new Date(value).toLocaleString() : "-";
+              } 
+              else {
+                displayValue = value?.toString();
+              }
+
+              return (
+                <p key={key}>
+                  <strong>{key}:</strong> {displayValue}
+                </p>
+              );
+            })}
+
+            <div className="flex gap-2 mt-6 justify-end col-span-2">
+              <button
+                type="button"
+                onClick={() => { setShowViewModal(false); setViewPost(null); }}
+                className="all_btn gray_color"
+              >
+                Close
+              </button>
             </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
+    </div>
+  </div>
+)}
+
 
     </div>
   );

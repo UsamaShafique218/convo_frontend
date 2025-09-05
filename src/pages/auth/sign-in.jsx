@@ -40,12 +40,12 @@ export function SignIn() {
     if (!validate()) return;
 
     setLoading(true);
-    try {
+    try { 
       const response = await fetch("/api/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
-      });
+      }); 
 
       const data = await response.json();
       console.log("API Response:", data); // Debug API response
@@ -58,7 +58,7 @@ export function SignIn() {
           token: token,
           id: user?.id || "",
           name: user?.name || "",
-          email: user?.email || email,   // ✅ email bhi save hoga
+          email: user?.email || email,   
           role: user?.role || "",
           profileType: user?.profileType || "",
         };
@@ -80,7 +80,7 @@ export function SignIn() {
     <section className="m-8 flex gap-4 sign_in_up_main">
       <div className="w-full lg:w-100">
         <div className="text-center">
-          <Typography variant="h2" className="font-bold mb-4">Sign In</Typography>
+          <Typography variant="h2" className="font-bold mb-4">Conva</Typography>
           <Typography variant="paragraph" color="blue-gray" className="text-lg font-normal">
             Enter your email and password to Sign In.
           </Typography>

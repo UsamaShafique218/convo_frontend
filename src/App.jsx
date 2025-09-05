@@ -5,7 +5,7 @@ import "./custom_responsive.css";
 
 import { SignIn, SignUp } from "./pages/auth";   
 import ProtectedRoute from "./pages/components/ProtectedRoute"; 
- 
+import Profile from "./pages/dashboard/Profile";
 
 function App() {
   return (
@@ -19,7 +19,15 @@ function App() {
           </ProtectedRoute>
         } 
       />
-    
+       {/* Profile Page: Protected */}
+      <Route 
+        path="/profile" 
+        element={
+          <ProtectedRoute>
+            <Profile />
+          </ProtectedRoute>
+        } 
+      />
 
 
 

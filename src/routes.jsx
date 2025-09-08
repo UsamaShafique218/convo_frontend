@@ -19,7 +19,7 @@ import {
 // import ZodiacSigns from "./pages/dashboard/references_data/ZodiacSigns";
 // import IcebreakerPrompts from "./pages/dashboard/references_data/IcebreakerPrompts";
 // import CollaborationProfile from "./pages/dashboard/CollaborationProfile"; 
-import Users from "./pages/dashboard/Users";
+// import Users from "./pages/dashboard/Users";
 // import Posts from "./pages/dashboard/Posts"; 
 
 const icon = {
@@ -36,12 +36,12 @@ export const routes = [
       //   path: "/home",
       //   element: <Home />,
       // }, 
-      {
-        icon: <TableCellsIcon {...icon} />,
-        name: "Users",
-        path: "/Users",
-        element: <Users />,
-      },
+      // {
+      //   icon: <TableCellsIcon {...icon} />,
+      //   name: "Users",
+      //   path: "/Users",
+      //   element: <Users />,
+      // },
        
       // {
       //   icon: <TableCellsIcon {...icon} />,

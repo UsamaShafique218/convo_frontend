@@ -5,7 +5,7 @@ import "./custom_responsive.css";
 
 import { SignIn, SignUp } from "./pages/auth";   
 import ProtectedRoute from "./pages/components/ProtectedRoute"; 
-import Profile from "./pages/dashboard/Profile";
+// import Profile from "./pages/dashboard/Profile";
 import { Auth, Dashboard } from "./layouts";
 
 function App() {
@@ -21,14 +21,14 @@ function App() {
         } 
       />
        {/* Profile Page: Protected */}
-      <Route 
+      {/* <Route 
         path="/profile" 
         element={
           <ProtectedRoute>
             <Profile />
           </ProtectedRoute>
         } 
-      />
+      /> */}
 
 
 

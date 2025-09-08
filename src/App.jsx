@@ -3,11 +3,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import "./cutome.css";
 import "./custom_responsive.css";
 
-import { SignIn, SignUp } from "./pages/auth";   
-import ProtectedRoute from "./pages/components/ProtectedRoute"; 
+import { SignIn, SignUp } from "./pages/auth";    
 // import Profile from "./pages/dashboard/Profile";
 import { Auth } from "./layouts";
-import Users from "./pages/dashboard/Users";
+// import Users from "./pages/dashboard/Users";
 
 function App() {
   return (
@@ -31,7 +30,7 @@ function App() {
         } 
       /> */}
 
-      <Route path="/Users*" element={<Users />} /> 
+      {/* <Route path="/Users*" element={<Users />} />  */}
 
 
 

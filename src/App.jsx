@@ -11,27 +11,7 @@ import { Auth } from "./layouts";
 function App() {
   return (
     <Routes>
-      {/* Dashboard Layout: Protected */}
-      {/* <Route 
-        path="/dashboard/*" 
-        element={
-          <ProtectedRoute>
-            <Dashboard />
-          </ProtectedRoute>
-        } 
-      /> */}
-       {/* Profile Page: Protected */}
-      {/* <Route 
-        path="/profile" 
-        element={
-          <ProtectedRoute>
-            <Profile />
-          </ProtectedRoute>
-        } 
-      /> */}
-
-      {/* <Route path="/Users*" element={<Users />} />  */}
-
+     
 
 
       {/* Auth Layout: public */}

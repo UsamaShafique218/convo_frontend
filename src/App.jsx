@@ -1,11 +1,12 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { Dashboard, Auth } from "@/layouts";
+// import { Dashboard, Auth } from "@/layouts";
 import "./cutome.css";
 import "./custom_responsive.css";
 
 import { SignIn, SignUp } from "./pages/auth";   
 import ProtectedRoute from "./pages/components/ProtectedRoute"; 
 import Profile from "./pages/dashboard/Profile";
+import { Auth, Dashboard } from "./layouts";
 
 function App() {
   return (

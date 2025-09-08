@@ -2,7 +2,7 @@ import {
   HomeIcon, 
   TableCellsIcon, 
 } from "@heroicons/react/24/solid";
-import { Home } from "@/pages/dashboard"; 
+// import { Home } from "@/pages/dashboard"; 
 // import Genders from "./pages/dashboard/references_data/Genders";
 // import Industries from "./pages/dashboard/references_data/Industries";
 // import NetworkinGoals from "./pages/dashboard/references_data/NetworkinGoals";
@@ -30,12 +30,12 @@ export const routes = [
   {
     layout: "dashboard",
     pages: [
-      {
-        icon: <HomeIcon {...icon} />,
-        name: "dashboard",
-        path: "/home",
-        element: <Home />,
-      }, 
+      // {
+      //   icon: <HomeIcon {...icon} />,
+      //   name: "dashboard",
+      //   path: "/home",
+      //   element: <Home />,
+      // }, 
       {
         icon: <TableCellsIcon {...icon} />,
         name: "Users",

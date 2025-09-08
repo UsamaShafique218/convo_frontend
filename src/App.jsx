@@ -6,20 +6,21 @@ import "./custom_responsive.css";
 import { SignIn, SignUp } from "./pages/auth";   
 import ProtectedRoute from "./pages/components/ProtectedRoute"; 
 // import Profile from "./pages/dashboard/Profile";
-import { Auth, Dashboard } from "./layouts";
+import { Auth } from "./layouts";
+import Users from "./pages/dashboard/Users";
 
 function App() {
   return (
     <Routes>
       {/* Dashboard Layout: Protected */}
-      <Route 
+      {/* <Route 
         path="/dashboard/*" 
         element={
           <ProtectedRoute>
             <Dashboard />
           </ProtectedRoute>
         } 
-      />
+      /> */}
        {/* Profile Page: Protected */}
       {/* <Route 
         path="/profile" 
@@ -29,6 +30,8 @@ function App() {
           </ProtectedRoute>
         } 
       /> */}
+
+      <Route path="/Users*" element={<Users />} /> 
 
 
 
@@ -40,7 +43,9 @@ function App() {
       <Route path="/auth/sign-up" element={<SignUp />} />  
 
       {/* Catch-all redirect */}
-      <Route path="*" element={<Navigate to="/auth/sign-in" replace />} /> 
+      <Route path="*" element={<Navigate to="/auth/sign-in" replace />} />
+
+
       
     </Routes>
   );

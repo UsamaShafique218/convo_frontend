@@ -1,4 +1,4 @@
-export * from "@/pages/dashboard/Home"; 
+// export * from "@/pages/dashboard/Home"; 
 // export * from "@/pages/dashboard/references_data/Genders";  
 // export * from "@/pages/dashboard/references_data/Industries"; 
 // export * from "@/pages/dashboard/references_data/NetworkinGoals"; 

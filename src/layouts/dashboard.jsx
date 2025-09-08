@@ -27,7 +27,7 @@ export function Dashboard() {
 
         {/* Main Content */}
         <div className="flex-1 p-4">
-          <Routes>
+          {/* <Routes>
             {routes.map(
               ({ layout, pages }) =>
                 layout === "dashboard" &&
@@ -43,7 +43,7 @@ export function Dashboard() {
                   );
                 })
             )}
-          </Routes>
+          </Routes> */}
 
           <div className="text-blue-gray-600">
             <Footer />
